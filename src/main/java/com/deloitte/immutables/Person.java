@@ -1,4 +1,4 @@
-package com.immutables;
+package com.deloitte.immutables;
 
 import org.immutables.value.Value;
 

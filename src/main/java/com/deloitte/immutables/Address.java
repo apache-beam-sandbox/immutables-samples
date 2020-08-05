@@ -1,4 +1,4 @@
-package com.immutables;
+package com.deloitte.immutables;
 
 import org.immutables.value.Value;
 /*
@@ -15,5 +15,4 @@ public abstract class Address {
 	@Value.Parameter
 	abstract Integer zipCode();
 	
-
 }
