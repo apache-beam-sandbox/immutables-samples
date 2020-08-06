@@ -1,4 +1,4 @@
-package com.immutables;
+package com.deloitte.immutables;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
@@ -14,8 +14,10 @@ public class ImmutableAddressTest {
 		ImmutableAddress address = ImmutableAddress
 				.of("Bangalore", "Old Airport Road", 560037);
 		
-		ImmutableAddress address2 = address.withCity("Mysore");
+		ImmutableAddress addressWithDifferntCity = address.withCity("Mysore");
 		
-		assertThat(address.hashCode(),not(is(address2.hashCode())));
+		assertThat(address.hashCode(),not(is(addressWithDifferntCity.hashCode())));
+		assertThat(address.hashCode(),is(addressWithDifferntCity.withCity("Bangalore").hashCode()));
+		
 	}
 }
